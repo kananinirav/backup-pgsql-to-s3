@@ -8,7 +8,7 @@ To backup a PostgreSQL database and upload the dump to Amazon S3 in a Ruby on Ra
    - Add your db credential to pgpass file `hostname:port:database:username:password`
    - pgpass file access permissions should be u=rw (0600) or less `chmod 600 ~/.pgpass`
    - [more information about pgpass](https://www.postgresql.org/docs/current/libpq-pgpass.html)
-3. create `aws_config.rb` in `config/initializers` folder
+3. create `aws_config.rb` in `config/initializers` folder ([please check this file](./config/initializers/aws_config.rb)) or if you have S3 BUCKET object then use this no need to create this file. just update your object name in ([s3.rb](./lib/backup_pgsql_s3/s3.rb))
 4. create `aws_s3_credential.yml` in `config` folder and update your credentials
 5. copy `backup_pgsql_s3` folder and `backup_pgsql_s3.rb` file in your lib folder.
 6. add `require 'backup_pgsql_s3'` in file where you want to use

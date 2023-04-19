@@ -11,7 +11,7 @@ To backup a PostgreSQL database and upload the dump to Amazon S3 in a Ruby on Ra
 3. create `aws_config.rb` in `config/initializers` folder
 4. create `aws_s3_credential.yml` in `config` folder and update your credentials
 5. copy `backup_pgsql_s3` folder and `backup_pgsql_s3.rb` file in your lib folder.
-6. add `require 'backup_pgsql_s3` in file where you want to use
+6. add `require 'backup_pgsql_s3'` in file where you want to use
 7. set configurations
 
     ```ruby
@@ -26,13 +26,15 @@ To backup a PostgreSQL database and upload the dump to Amazon S3 in a Ruby on Ra
         backup_filename: '/tmp/my_database.backup',
         compression: true,
         delete_after_upload: true,
-        s3_path: 'save/file_to/'
+        s3_path: 'path/to/backups'
       }
     end
     ```
 
 8. Now just add `BackupPgsqlS3.backup`
 
-If you want to backup everyday then setup Cron Job using Whenever gem [Cron Job Setup](https://medium.com/@kanani-nirav/scheduling-tasks-using-the-whenever-gem-ruby-on-rails-5e61c82ad563)
+Example: [click](./example.rb)
+
+If you want to backup everyday then setup Cron Job using Whenever gem [Cron Job Setup article](https://medium.com/@kanani-nirav/scheduling-tasks-using-the-whenever-gem-ruby-on-rails-5e61c82ad563)
 
 If this guide has been helpful to you and your team please share it with others!

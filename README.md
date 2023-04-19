@@ -34,3 +34,5 @@ To backup a PostgreSQL database and upload the dump to Amazon S3 in a Ruby on Ra
 8. Now just add `BackupPgsqlS3.backup`
 
 If you want to backup everyday then setup Cron Job using Whenever gem [Cron Job Setup](https://medium.com/@kanani-nirav/scheduling-tasks-using-the-whenever-gem-ruby-on-rails-5e61c82ad563)
+
+If this guide has been helpful to you and your team please share it with others!
